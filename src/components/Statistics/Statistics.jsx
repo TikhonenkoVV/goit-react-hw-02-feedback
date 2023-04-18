@@ -6,8 +6,8 @@ export const Statistics = ({ options }) => {
     const entries = Object.entries(options);
     return (
         <StyledStatistickList>
-            {entries.map(el => {
-                return <StatListItem key={el[0]} name={el[0]} value={el[1]} />;
+            {entries.map(([name, value]) => {
+                return <StatListItem key={name} name={name} value={value} />;
             })}
         </StyledStatistickList>
     );
